@@ -1,1 +1,28 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: Slowing;
+  src: 
+  url('../src/assets/fonts/NokRegular.ttf'),
+}
+
+@font-face {
+  font-family: Gloria;
+  src:
+  url('../src/assets/fonts/Quicksand-VariableFont_wght.ttf'),
+}
+
+@theme {
+  --font-slowin: Slowing, "sans-serif";
+  --font-glori: Gloria, "normal";
+}
+
+.letra {
+  -webkit-text-stroke: 1px black;
+  text-shadow: 5px 5px 0px black;
+}
+
+.text-shadow {
+  text-shadow: 
+    5px 5px 0px black
+}
