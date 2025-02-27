@@ -1,13 +1,9 @@
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-6">
-        <div className="flex justify-center">
-          <div className="text-center text-gray-400">
-            <p>Copyright @2024, <a href="#">Luciano</a> All Rights Reserved.</p>
-          </div>
-        </div>
-      </div>
+    <footer className="bg-transparent py-10 text-center">
+      <p className="text-md text-gray-600 font-glori">
+      Copyright &copy; 2025, <a href="#" className="text-[#F0A04B] hover:underline">Luciano</a> All Rights Reserved.
+      </p>
     </footer>
   )
 }
