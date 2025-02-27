@@ -3,13 +3,13 @@
 @font-face {
   font-family: Slowing;
   src: 
-  url('../src/assets/fonts/NokRegular.ttf'),
+  url('/fonts/NokRegular.ttf'),
 }
 
 @font-face {
   font-family: Gloria;
   src:
-  url('../src/assets/fonts/Quicksand-VariableFont_wght.ttf'),
+  url('/fonts/Quicksand-VariableFont_wght.ttf'),
 }
 
 @theme {
