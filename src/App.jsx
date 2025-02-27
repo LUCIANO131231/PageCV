@@ -5,7 +5,7 @@ import About from './components/About'
 
 function App() {
   return (
-    <main>
+    <main className='min-h-screen'>
       <Header />
       <Banner />
       <About />
