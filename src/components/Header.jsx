@@ -12,50 +12,70 @@ const menuList = [
 ]
 
 const Header = () => {
-  const [isSticky, setisSticky] = useState(false)
-  useEffect(() => {
-    window.addEventListener("scroll", stickyHeader)
-    return () => window.removeEventListener("scroll", stickyHeader)
-  }, [])
+  const [isSticky, setisSticky] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  let lastScrollY = 0;
 
-  const stickyHeader = () => {
-    const scrollTop = window.scrollY
-    setisSticky(scrollTop > 85)
-  }
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+
+      if(scrollTop > 85) {
+        setisSticky(true);
+        if(scrollTop > lastScrollY) {
+          setIsVisible(true); //ocultar al bajar
+        } else {
+          setIsVisible(true); //mostrar al subir
+        }
+      } else {
+        setIsVisible(false);
+        setIsVisible(true); //mostrar visible cuando esta arriba
+      }
+      lastScrollY = scrollTop;
+    };
+    
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className={`w-full transition-all duration-500 ${isSticky ? "fixed top-0 left-0 bg-white shadow-md" : ""}`}>
-      <div className="py-4 bg-white w-full">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex justify-between items-center">
-            {/*logo personal*/}
-            <div>
-              <a href="#">
-                <img src={logo} alt="logo" className="w-20" />
-              </a>
-            </div>
-            {/*navbar*/}
-            <nav className="hidden lg:flex space-x-6">
-              {menuList.map(({ id, label, path}) => (
-                <Link
-                  key={id}
-                  to={path} 
-                  spy={true} 
-                  smooth={true} 
-                  offset={0} 
-                  duration={500} 
-                  className="text-gray-700 hover:text-black transition-all cursor-pointer">
-                  {label}
-                </Link>
+    <header className={`w-full fixed top-0 left-0 z-[999] transition-all duration-500 ${isSticky ? "bg-white border-b border-gray-300" : "bg-transparent"} ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}>
+      <div className="w-full py-4">
+        <div className="container mx-auto flex items-center justify-between px-6">
+          
+          {/*logo personal*/}
+          <div>
+            <a href="#" className="block">
+              <img src={logo} alt="logo" className="h-9 w-9 object-contain" />
+            </a>
+          </div>
+
+          {/*navbar*/}
+          <nav className="hidden lg:flex space-x-6">
+            <ul className="flex space-x-6">
+              {menuList.map(({ id, label, path }) => (
+                <li key={id}>
+                  <Link 
+                    to={path} 
+                    spy={true} 
+                    smooth={true} 
+                    offset={0} 
+                    duration={500} 
+                    className="cursor-pointer text-gray-700 hover:text-black transition">
+                    {label}
+                  </Link>
+                </li>
               ))}
-            </nav>
-            {/*para movil*/}
-            <div className="lg:hidden">
-              <button className="flex flex-col space-y-1">
-                <span className="block w-6 h-0.5 bg-black"></span>
-                <span className="block w-6 h-0.5 bg-black"></span>
-                <span className="block w-6 h-0.5 bg-black"></span>
-              </button>
-            </div>
+            </ul>
+          </nav>
+          
+          {/*para movil*/}
+          <div className="md:hidden">
+            <button className="flex flex-col space-y-1">
+              <span className="w-5 h-[3px] bg-[#818C78]"></span>
+              <span className="w-5 h-[3px] bg-[#818C78]"></span>
+              <span className="w-5 h-[3px] bg-[#818C78]"></span>
+            </button>
           </div>
         </div>
       </div>
