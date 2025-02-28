@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import PropTypes from 'prop-types';
 
 const SlideUp = ({ children, id = 1 }) => {
   const slideLeftVariants = {
@@ -27,6 +28,11 @@ const SlideUp = ({ children, id = 1 }) => {
       {children}
     </motion.div>
   );
+};
+
+SlideUp.propTypes = {
+  children: PropTypes.node.isRequired,
+  id: PropTypes.number
 };
 
 export default SlideUp;
