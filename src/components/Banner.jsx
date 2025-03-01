@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <section id="home" className="pt-[115px]">
       <div className="container mx-auto">
-        <div className="bg-slate-300 rounded-2xl px-[50px] py-[100px] border border-gray-200">
+        <div className="bg-slate-300 rounded-2xl px-[50px] py-[100px] border border-gray-200 mx-4">
           <div className="flex justify-center">
             <div className="w-full">
               <SlideUp>

@@ -29,8 +29,7 @@ const Service = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-8">
           <Title>
-            <p className="text-md text-gray-600 font-glori uppercase">Services</p>
-            <h2 className="text-[110px] letra font-slowin text-white">Quality Services</h2>
+            <h2 className="text-[110px] letra font-slowin text-green-500">Quality Services</h2>
           </Title>
         </div>
 
@@ -40,8 +39,8 @@ const Service = () => {
               <ZoomIn id={id}>
                 <div className='p-12 bg-slate-200 rounded-2xl text-gray-500 text-start border border-transparent hover:border-gray-400 transition-all duration-300'>
                   {icon}
-                  <h4 className='text-xl font-semibold text-gray-800 mt-4'>{service_name}</h4>
-                  <p className='text-zinc-600 mt-2'>{service_descripcion}</p>
+                  <h4 className='text-xl text-black mt-4'>{service_name}</h4>
+                  <p className='text-gray-500 mt-2'>{service_descripcion}</p>
                 </div>
               </ZoomIn>
             </div>
