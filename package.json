@@ -13,6 +13,7 @@
     "@remixicon/react": "^4.6.0",
     "@tailwindcss/vite": "^4.0.9",
     "framer-motion": "^12.4.7",
+    "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scroll": "^1.9.3",
