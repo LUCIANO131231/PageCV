@@ -2,7 +2,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Banner from './components/Banner'
 import About from './components/About'
-import Service from './components/Service'
+import Skills from './components/Skills'
 import Experience from './components/Experience'
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
       <Header />
       <Banner />
       <About />
-      <Service />
       <Experience />
+      <Skills />
       <Footer />
     </main>
   )

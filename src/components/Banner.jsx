@@ -2,7 +2,7 @@ import SlideUp from "./animations/Slideup"
 
 const Banner = () => {
   return (
-    <section id="home" className="pt-[115px]">
+    <section id="home" className="pt-[215px]">
       <div className="container mx-auto">
         <div className="bg-slate-300 rounded-2xl px-[50px] py-[100px] border border-gray-200 mx-4">
           <div className="flex justify-center">

@@ -1,13 +1,13 @@
 import { RiBookLine, RiFolder6Fill, RiExpandLeftRightFill } from "@remixicon/react";
 import { motion } from "framer-motion";
 import Title from "./ui/Title";
-import { workExperience } from "../utils/WorkExperience";
-import { educationExperience } from "../utils/EducationExperience";
+import { workExperience } from "./utils/WorkExperience";
+import { educationExperience } from "./utils/EducationExperience";
 import PropTypes from 'prop-types';
 
 const Experience = () => {
   return (
-    <section id="resumen" className="py-12">
+    <section id="resume" className="py-24">
       <div className="container mx-auto px-4">
         <div className="w-full text-center mb-12">
           <div>
