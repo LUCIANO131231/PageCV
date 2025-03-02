@@ -1,104 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { 
-  RiTeamFill, RiLightbulbFill, RiTimeFill,
-  RiReactjsFill, RiHtml5Fill, RiCss3Fill, 
-  RiJavascriptFill, RiGithubFill, RiTerminalBoxFill 
-} from '@remixicon/react';
 import Title from "./ui/Title";
 import Tabs from "./animations/Tabs";
+import softSkillsList from "./animations/SoftSkills";
+import knowledgeList from "./animations/Knowledge";
 
-// Datos de aptitudes (soft skills)
-const aptitudes = [
-  {
-    id: 1,
-    name: "Trabajo en equipo",
-    level: 90,
-    icon: <RiTeamFill size={40} />,
-    color: "bg-blue-500"
-  },
-  {
-    id: 2,
-    name: "Liderazgo",
-    level: 85,
-    icon: <RiLightbulbFill size={40} />,
-    color: "bg-purple-500"
-  },
-  {
-    id: 3,
-    name: "Gestión del tiempo",
-    level: 80,
-    icon: <RiTimeFill size={40} />,
-    color: "bg-green-500"
-  },
-  {
-    id: 4,
-    name: "Resolución de problemas",
-    level: 95,
-    icon: <RiLightbulbFill size={40} />,
-    color: "bg-yellow-500"
-  },
-  {
-    id: 5,
-    name: "Comunicación",
-    level: 88,
-    icon: <RiTeamFill size={40} />,
-    color: "bg-red-500"
-  },
-  {
-    id: 6,
-    name: "Adaptabilidad",
-    level: 92,
-    icon: <RiTimeFill size={40} />,
-    color: "bg-indigo-500"
-  }
-];
-
-// Datos de conocimientos técnicos (hard skills)
-const conocimientos = [
-  {
-    id: 1,
-    name: "React",
-    percentage: 90,
-    icon: <RiReactjsFill size={32} />,
-    color: "from-blue-400 to-blue-600"
-  },
-  {
-    id: 2,
-    name: "HTML5",
-    percentage: 95,
-    icon: <RiHtml5Fill size={32} />,
-    color: "from-orange-400 to-orange-600"
-  },
-  {
-    id: 3,
-    name: "CSS3",
-    percentage: 85,
-    icon: <RiCss3Fill size={32} />,
-    color: "from-blue-500 to-blue-700"
-  },
-  {
-    id: 4,
-    name: "JavaScript",
-    percentage: 88,
-    icon: <RiJavascriptFill size={32} />,
-    color: "from-yellow-400 to-yellow-600"
-  },
-  {
-    id: 5,
-    name: "Git/GitHub",
-    percentage: 80,
-    icon: <RiGithubFill size={32} />,
-    color: "from-gray-700 to-gray-900"
-  },
-  {
-    id: 6,
-    name: "Node.js",
-    percentage: 75,
-    icon: <RiTerminalBoxFill size={32} />,
-    color: "from-green-500 to-green-700"
-  }
-];
 
 const Skills = () => {
   const [activeTab, setActiveTab] = useState("conocimientos");
@@ -130,7 +36,7 @@ const Skills = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             key="conocimientos">
-            {conocimientos.map((skill, index) => (
+            {knowledgeList.map((skill, index) => (
               <motion.div
                 key={skill.id}
                 initial={{ opacity: 0, y: 50 }}
@@ -178,7 +84,7 @@ const Skills = () => {
             transition={{ duration: 0.5 }}
             key="aptitudes"
           >
-            {aptitudes.map((aptitud, index) => (
+            {softSkillsList.map((aptitud, index) => (
               <motion.div
                 key={aptitud.id}
                 initial={{ opacity: 0, y: 50 }}
