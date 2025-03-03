@@ -16,7 +16,7 @@ const Tabs = ({ activeTab, setActiveTab }) => {
             onClick={() => setActiveTab(tab)}
             className={`px-6 py-2 rounded-full ml-2 text-md font-glori transition-all duration-300 
             ${activeTab === tab 
-            ? "bg-[#FFB433]" 
+            ? "bg-green-500" 
             : "bg-transparent hover:bg-gray-200"}`}>
             {tab.charAt(0).toUpperCase() + tab.slice(1)}
           </button>
