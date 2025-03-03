@@ -1,4 +1,15 @@
-import {RiReactjsFill, RiHtml5Fill, RiCss3Fill, RiJavascriptFill, RiGithubFill, RiTerminalBoxFill, RiVuejsFill} from '@remixicon/react';
+import {
+  RiReactjsFill, 
+  RiHtml5Fill, 
+  RiCss3Fill, 
+  RiJavascriptFill, 
+  RiGithubFill, 
+  RiTerminalBoxFill, 
+  RiVuejsFill,
+  RiTailwindCssFill,
+  RiFigmaFill,
+  RiPhpFill,} 
+from '@remixicon/react';
 import { motion } from "framer-motion";
 
 const knowledgeList = [
@@ -7,50 +18,71 @@ const knowledgeList = [
     name: "React",
     percentage: 90,
     icon: <RiReactjsFill size={35} />,
-    color: "from-blue-400"
+    color: "from-blue-500 to-blue-400"
   },
   {
     id: 2,
     name: "HTML5",
     percentage: 95,
     icon: <RiHtml5Fill size={35} />,
-    color: "from-orange-400"
+    color: "from-orange-500 to-orange-400"
   },
   {
     id: 3,
     name: "CSS3",
     percentage: 85,
     icon: <RiCss3Fill size={35} />,
-    color: "from-blue-500"
+    color: "from-blue-500 to-blue-400"
   },
   {
     id: 4,
     name: "JavaScript",
     percentage: 88,
     icon: <RiJavascriptFill size={35} />,
-    color: "from-yellow-400"
+    color: "from-yellow-500 to-yellow-400"
   },
   {
     id: 5,
     name: "Git/GitHub",
     percentage: 80,
     icon: <RiGithubFill size={35} />,
-    color: "from-gray-700"
+    color: "from-gray-500 to-gray-400"
   },
   {
     id: 6,
     name: "Node.js",
     percentage: 75,
     icon: <RiTerminalBoxFill size={35} />,
-    color: "from-green-500"
+    color: "from-green-500 to-green-400"
   },
   {
     id: 7,
     name: "Vue.js",
     percentage: 75,
     icon: <RiVuejsFill size={35} />,
-    color: "from-green-500"
-  }
+    color: "from-green-500 to-green-400"
+  },
+  {
+    id: 8,
+    name: "Tailwind",
+    percentage: 80,
+    icon: <RiTailwindCssFill size={35} />,
+    color: "from-teal-500 to-teal-400"
+  },
+  {
+    id: 9,
+    name: "Figma",
+    percentage: 80,
+    icon: <RiFigmaFill size={35} />,
+    color: "from-gray-500 to-gray-400"
+  },
+  {
+    id: 10,
+    name: "Php",
+    percentage: 80,
+    icon: <RiPhpFill size={35} />,
+    color: "from-indigo-500 to-indigo-400"
+  },
 ];
 
 const Knowledge = () => {
