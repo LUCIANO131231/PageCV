@@ -2,10 +2,10 @@ import SlideUp from "./animations/Slideup"
 
 const Banner = () => {
   return (
-    <section id="home" className="pt-[215px]">
-      <div className="container mx-auto">
-        <div className="bg-slate-300 rounded-2xl px-[50px] py-[100px] border border-gray-200 mx-4">
-          <div className="flex justify-center">
+    <section id="home" className="py-36">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="bg-slate-300 shadow-2xl  rounded-lg p-10 text-center">
+          <div className="flex flex-col items-center">
             <div className="w-full">
               <SlideUp>
                 <div className="text-center">
