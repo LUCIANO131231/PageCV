@@ -7,7 +7,7 @@ const menuList = [
   { id: 2, path: "about", label: "About" },
   { id: 3, path: "resume", label: "Resume" },
   { id: 4, path: "skill", label: "Skills" },
-  { id: 5, path: "portfolio", label: "Projects" },
+  { id: 5, path: "project", label: "Projects" },
   { id: 6, path: "contact", label: "Contact" },
 ]
 

@@ -10,7 +10,7 @@ const Banner = () => {
               <SlideUp>
                 <div className="text-center">
                   <h1 className="text-[110px] font-slowin capitalize leading-[68px] text-[#D98324] text-shadow">
-                    Im <span className="letra text-white">Luciano</span> Estela
+                    I&#8217;m <span className="letra text-white">Luciano</span> Estela
                   </h1>
                   <div className="inline-block bg-white px-10 py-4 mt-8 font-glori text-2xl text-gray-500">
                     <span>UI Designer and Frontend Developer</span>
