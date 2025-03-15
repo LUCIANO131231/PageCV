@@ -12,7 +12,7 @@ const Experience = () => {
         <div className="w-full text-center mb-12">
           <div>
             <Title>
-              <h2 className="text-[90px] letra font-slowin text-green-500">Professional Resume</h2>
+              <h2 className="text-[90px] letra font-slowin text-green-500">Resumen</h2>
             </Title>
           </div>
         </div>
