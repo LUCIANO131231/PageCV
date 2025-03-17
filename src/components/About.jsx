@@ -43,7 +43,7 @@ const About = () => {
                   Hello my friend, im Luciano Estela, <span className="px-5 border shadow-gray-400 shadow-lg border-black/10">Framer Developer</span> and UX/IX Designer from Perú, Huánuco.
                 </h2>
                 <div className="mt-6">
-                  <a href="#" className="inline-flex items-center bg-[#AAB99A] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#727D73] transition">
+                  <a href="../../public/cv/Curriculum Vitae.pdf" target="_blank" className="inline-flex items-center bg-[#AAB99A] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#727D73] transition">
                     Downloand CV <RiDownloadFill size={16} className="ml-2" />
                   </a>
                 </div>
