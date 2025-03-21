@@ -8,7 +8,8 @@ const menuList = [
   { id: 3, path: "resume", label: "Resume" },
   { id: 4, path: "skill", label: "Skills" },
   { id: 5, path: "project", label: "Projects" },
-  { id: 6, path: "contact", label: "Contact" },
+  { id: 6, path: "certificate", label: "Certificates" },
+  { id: 7, path: "contact", label: "Contact" },
 ]
 
 const Header = () => {
