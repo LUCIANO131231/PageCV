@@ -10,10 +10,9 @@ const CertificateCard = ({ certificate, index, onClick }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -10, transition: { duration: 0.2 } }}
-      layoutId={`certificate-${certificate.id}`}
-      onClick={() => onClick(certificate)}>
+      layoutId={`certificate-${certificate.id}`}>
 
-        <div className='relative group overflow-hidden'>
+        <div className='relative group overflow-hidden cursor-pointer' onClick={() => onClick(certificate)}>
           {/* imagen de certificado */}
           <img 
             src={certificate.image} 
