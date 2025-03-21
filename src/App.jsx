@@ -4,7 +4,8 @@ import Banner from './components/Banner'
 import About from './components/About'
 import Skills from './components/Skills'
 import Experience from './components/Experience'
-import Project from './components/Project'
+// import Project from './components/Project'
+import Certificates from './components/Certificates'
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       <About />
       <Experience />
       <Skills />
-      <Project />
+      {/* <Project /> */}
+      <Certificates />
       <Footer />
     </main>
   )
