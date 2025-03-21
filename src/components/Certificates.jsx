@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RiSearchLine, RiFilterLine, RiAwardFill } from '@remixicon/react';
+import { certificatesData, certificateCategories } from './utils/CertificatesData';
 import Title from './ui/Title';
 import CertificateCard from './ui/CertificateCard';
 import CertificateModal from './ui/CertificateModal';
 import Pagination from './ui/Pagination';
-import { certificatesData, certificateCategories } from './utils/CertificatesData';
+import FloatingCertificate from './animations/FloatingCertificate';
 
 const Certificates = () => {
   const [selectedCategory, setSelectedCategory] = useState('Todos');
@@ -70,7 +71,8 @@ const Certificates = () => {
       <div className="max-w-7xl mx-auto px-4">
         
         {/* titulo de la seccion */}
-        <div className="w-full text-center mb-8">
+        <div className="w-full text-center mb-8 relative">
+          <FloatingCertificate />
           <Title>
             <h2 className="text-[90px] letra font-slowin text-green-500">
               Mis Certificados
@@ -98,7 +100,7 @@ const Certificates = () => {
               <input
                 type="text"
                 placeholder="Buscar certificados..."
-                className="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="block w-full pl-10 pr-4 py-3 border border-gray-400 rounded-2xl focus:outline-none focus:border-green-600 focus:ring-0"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
@@ -125,8 +127,8 @@ const Certificates = () => {
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm transition-colors ${
-                  selectedCategory === category
+                  className={`px-4 py-2 rounded-full text-sm transition-colors cursor-pointer 
+                  ${selectedCategory === category
                   ? 'bg-green-500 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>
                   {category}
