@@ -1,8 +1,21 @@
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
-import { RiCloseLine, RiDownloadLine, RiMedal2Fill, RiCalendar2Fill } from '@remixicon/react';
+import { RiCloseLine, RiMedal2Fill, RiCalendar2Fill } from '@remixicon/react';
+import Confetti from '../animations/Confetti';
+import { useEffect, useState } from 'react';
 
 const CertificateModal = ({ certificate, onClose }) => {
+  const [showConfetti, setShowConfetti] = useState(false);
+
+  useEffect(() => {
+    if(certificate) {
+      setShowConfetti(true);
+      //desactivar despues de 5 segundos
+      const timer = setTimeout(() => setShowConfetti(false), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [certificate]);
+
   if (!certificate) return null;
 
   return (
@@ -13,6 +26,7 @@ const CertificateModal = ({ certificate, onClose }) => {
       exit={{ opacity: 0 }}
       onClick={onClose}>
         
+      <Confetti isActive={showConfetti} />  
       <motion.div
         className="bg-white rounded-xl overflow-hidden max-w-4xl w-full max-h-[90vh] flex flex-col md:flex-row"
         layoutId={`certificate-${certificate.id}`}
@@ -37,7 +51,7 @@ const CertificateModal = ({ certificate, onClose }) => {
             <h2 className="text-2xl font-glori font-bold">{certificate.title}</h2>
             <button 
               onClick={onClose}
-              className="p-2 rounded-full hover:bg-gray-100 transition-colors">
+              className="p-2 rounded-full hover:bg-gray-100 transition-colors cursor-pointer">
               <RiCloseLine size={24} />
             </button>
           </div>
@@ -62,18 +76,11 @@ const CertificateModal = ({ certificate, onClose }) => {
             <div className="bg-gray-50 rounded-lg p-4 mt-4">
               <h3 className="font-medium mb-2">Acerca de este certificado</h3>
               <p className="text-gray-600 text-sm">
-                Este certificado valida tus habilidades y conocimientos en {certificate.category}. 
-                Otorgado por {certificate.organization}, representa tu dedicación al aprendizaje continuo 
-                y el dominio de las competencias requeridas en el mundo profesional.
+              Certificación obtenida en tras completar satisfactoriamente el programa formativo. 
+              Este curso impartido por <span className='font-glori text-blue-700 font-bold'>{certificate.organization}</span> me permitió adquirir conocimientos especializados 
+              y competencias profesionales en <span className='font-glori text-blue-700 font-bold'>{certificate.title}</span>.
               </p>
             </div>
-          </div>
-          
-          <div className="mt-6">
-            <button className="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg flex items-center justify-center font-medium transition-colors">
-              <RiDownloadLine size={20} className="mr-2" />
-              Descargar Certificado
-            </button>
           </div>
         </div>
       </motion.div>
