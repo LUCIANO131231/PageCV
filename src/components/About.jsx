@@ -1,5 +1,5 @@
 import SlideUp from "./animations/Slideup"
-import Profile from "../assets/images/about/profile.jpg"
+import Profile from "../assets/images/about/0000.jpg"
 import {RiFacebookCircleFill, RiLinkedinFill, RiGithubFill, RiInstagramFill, RiDownloadFill, RiArrowRightUpLine} from '@remixicon/react'
 
 const About = () => {
