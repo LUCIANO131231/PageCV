@@ -5,6 +5,12 @@ import certificado4 from '../../assets/certificates/004.jpg'
 import certificado5 from '../../assets/certificates/005.jpg'
 import certificado6 from '../../assets/certificates/006.jpg'
 import certificado7 from '../../assets/certificates/007.jpg'
+import certificado8 from '../../assets/certificates/008.jpg'
+import certificado9 from '../../assets/certificates/009.jpg'
+import certificado10 from '../../assets/certificates/0010.jpg'
+import certificado11 from '../../assets/certificates/0011.jpg'
+import certificado12 from '../../assets/certificates/0012.jpg'
+import certificado13 from '../../assets/certificates/0013.jpg'
 
 export const certificatesData = [
   {
@@ -62,6 +68,54 @@ export const certificatesData = [
     date: "Noviembre 2024",
     category: "Universidad",
     image: certificado7,
+  },
+  {
+    id: 8,
+    title: "Marketing Digital",
+    organization: "Certiprof",
+    date: "Abril 2024",
+    category: "Marketing Digital",
+    image: certificado8,
+  },
+  {
+    id: 9,
+    title: "Python Essentials 1",
+    organization: "Cisco Networking Academy",
+    date: "Setiembre 2023",
+    category: "Programación",
+    image: certificado9,
+  },
+  {
+    id: 10,
+    title: "Diseño Web con HTML5 + CSS",
+    organization: "Fundación Telefónica",
+    date: "Mayo 2024",
+    category: "Desarrollo Web",
+    image: certificado10,
+  },
+  {
+    id: 11,
+    title: "Generative AI",
+    organization: "Certiprof",
+    date: "Octubre 2024",
+    category: "Inteligencia Artificial",
+    image: certificado11,
+  },
+  {
+    id: 12,
+    title: "Scrum Foundation",
+    organization: "Certiprof",
+    date: "Abril 2024",
+    category: "Gestión de Proyectos",
+    image: certificado12,
+  },
+  {
+    id: 13,
+    title: "Introduction to Data Science",
+    organization: "Cisco Networking Academy",
+    date: "Abril 2024",
+    category: "Ciencia de Datos",
+    image: certificado13,
   }
 ];
 
@@ -70,5 +124,14 @@ export const certificateCategories = [
   "Todos",
   "Desarrollo Web",
   "Ciberseguridad",
+  "Programación",
   "Gestión de Proyectos",
+  "Habilidades Profesionales",
+  "Administración Pública",
+  "Transformación Digital",
+  "Ofimática",
+  "Marketing Digital",
+  "Inteligencia Artificial",
+  "Ciencia de Datos",
+  "Universidad"
 ];
