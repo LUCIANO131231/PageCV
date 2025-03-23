@@ -37,10 +37,10 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         <button
           onClick={() => currentPage > 1 && onPageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className={`p-2 rounded-full 
+          className={`p-2 rounded-full
           ${currentPage === 1 
           ? 'text-gray-400 cursor-not-allowed' 
-          : 'text-gray-700 hover:bg-green-100'}`}>
+          : 'text-gray-700 hover:bg-green-100 cursor-pointer'}`}>
           <RiArrowLeftSLine size={24} />
         </button>
 
@@ -49,7 +49,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
           <motion.button
             key={index}
             onClick={() => typeof page === 'number' && onPageChange(page)}
-            className={`h-10 w-10 rounded-full flex items-center justify-center font-glori 
+            className={`h-10 w-10 rounded-full flex items-center justify-center font-glori cursor-pointer
             ${currentPage === page
             ? 'bg-green-500 text-white font-medium'
             : page === '...'
@@ -68,7 +68,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
           className={`p-2 rounded-full 
           ${currentPage === totalPages 
           ? 'text-gray-400 cursor-not-allowed' 
-          : 'text-gray-700 hover:bg-green-100'}`}>
+          : 'text-gray-700 hover:bg-green-100 cursor-pointer'}`}>
           <RiArrowRightSLine size={24} />
         </button>
     </motion.div>
