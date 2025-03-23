@@ -86,11 +86,11 @@ const Certificates = () => {
         
         {/* barra de busqueda y filtros */}
         <div className="mb-8 max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex flex-col md:flex-row gap-4 items-center">
             
             {/* Barra de búsqueda */}
             <motion.div 
-              className="relative flex-grow"
+              className="relative flex-grow w-full"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}>
