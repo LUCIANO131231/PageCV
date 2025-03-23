@@ -11,6 +11,9 @@ import certificado10 from '../../assets/certificates/0010.jpg'
 import certificado11 from '../../assets/certificates/0011.jpg'
 import certificado12 from '../../assets/certificates/0012.jpg'
 import certificado13 from '../../assets/certificates/0013.jpg'
+import certificado14 from '../../assets/certificates/0014.jpg'
+import certificado15 from '../../assets/certificates/0015.jpg'
+import certificado16 from '../../assets/certificates/0016.jpg'
 
 export const certificatesData = [
   {
@@ -116,6 +119,30 @@ export const certificatesData = [
     date: "Abril 2024",
     category: "Ciencia de Datos",
     image: certificado13,
+  },
+  {
+    id: 14,
+    title: "Fundamentos profesionales de IA generativa",
+    organization: "Microsoft y Linkedin",
+    date: "Marzo 2025",
+    category: "Inteligencia Artificial",
+    image: certificado14,
+  },
+  {
+    id: 15,
+    title: "Cyber Threat Management",
+    organization: "Cisco Networking Academy",
+    date: "Agosto 2024",
+    category: "Ciberseguridad",
+    image: certificado15,
+  },
+  {
+    id: 16,
+    title: "Seguridad en Internet",
+    organization: "Fundación Telefónica",
+    date: "Abril 2024",
+    category: "Ciberseguridad",
+    image: certificado16,
   }
 ];
 
