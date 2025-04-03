@@ -1,4 +1,4 @@
-import { RiBookLine, RiFolder6Fill, RiExpandLeftRightFill } from "@remixicon/react";
+import { RiExpandLeftRightFill } from "@remixicon/react";
 import { motion } from "framer-motion";
 import Title from "./ui/Title";
 import { workExperience } from "./utils/WorkExperience";
@@ -96,8 +96,6 @@ const TimelineCard = ({ item, index, type }) => {
     }
   };
 
-  const Icon = type === "work" ? RiFolder6Fill : RiBookLine;
-
   return (
     <div className="flex relative">
       {/* Círculo en la línea de tiempo */}
@@ -119,10 +117,6 @@ const TimelineCard = ({ item, index, type }) => {
         viewport={{ once: true, amount: 0.1 }}
         whileHover={{ y: -5, transition: { duration: 0.2 } }}>
         <div className="flex items-start">
-          <div className="w-10 h-10 flex items-center justify-center bg-[#D7D3BF] rounded-full mr-4">
-            <Icon size={20} className="text-gray-400" />
-          </div>
-
           <div>
             <span className="text-sm font-bold bg-blue-50 px-3 py-1 rounded-full">{years}</span>
             <h4 className="text-lg font-semibold text-gray-800 mt-2">{institute}</h4>
