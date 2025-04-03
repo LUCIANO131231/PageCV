@@ -6,7 +6,7 @@ import Title from './ui/Title';
 import CertificateCard from './ui/CertificateCard';
 import CertificateModal from './ui/CertificateModal';
 import Pagination from './ui/Pagination';
-import FloatingCertificate from './animations/FloatingCertificate';
+// import FloatingCertificate from './animations/FloatingCertificate';
 
 const Certificates = () => {
   const [selectedCategory, setSelectedCategory] = useState('Todos');
@@ -72,7 +72,7 @@ const Certificates = () => {
         
         {/* titulo de la seccion */}
         <div className="w-full text-center mb-8 relative">
-          <FloatingCertificate />
+          {/* <FloatingCertificate /> */}
           <Title>
             <h2 className="text-[90px] letra font-slowin text-green-500">
               Mis Certificados
@@ -95,12 +95,12 @@ const Certificates = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}>
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <RiSearchLine className="text-gray-400" size={20} />
+                <RiSearchLine className="text-gray-700" size={20} />
               </div>
               <input
                 type="text"
                 placeholder="Buscar certificados..."
-                className="block w-full pl-10 pr-4 py-3 border border-gray-400 rounded-2xl focus:outline-none focus:border-green-600 focus:ring-0"
+                className="block w-full pl-10 pr-4 py-3 border border-gray-700 rounded-2xl focus:outline-none focus:border-gray-700 focus:ring-0"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
