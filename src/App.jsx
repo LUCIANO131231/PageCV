@@ -9,7 +9,7 @@ import Certificates from './components/Certificates'
 
 function App() {
   return (
-    <main className='min-h-screen'>
+    <main className='min-h-screen bg-gradient-to-br from-[#85A98F]'>
       <Header />
       <Banner />
       <About />
