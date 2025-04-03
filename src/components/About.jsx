@@ -4,7 +4,7 @@ import {RiFacebookCircleFill, RiLinkedinFill, RiGithubFill, RiInstagramFill, RiD
 
 const About = () => {
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="py-32">
       <div className="container mx-auto px-6">
         <div className="flex flex-wrap items-center">
           {/* perfil */}
@@ -13,7 +13,7 @@ const About = () => {
               <div>
                 <img src={Profile} alt="Perfil" className="rounded-xl mx-auto object-contain w-[420px] h-[420px]" />
                 <h2 className="mt-8 text-3xl">Luciano Estela</h2>
-                <div className="relative inline-flex items-center border border-gray-200 px-5 py-3 mt-4 rounded-full">
+                <div className="relative inline-flex items-center border border-gray-800 px-5 py-3 mt-4 rounded-full">
                   <h6 className="text-gray-600 mr-4">Disponible para trabajar</h6>
                   <div className="absolute right-3 h-3 w-3 bg-green-400 rounded-full animate-ping"></div>
                   <div className="absolute right-3 h-3 w-3 bg-green-400 rounded-full"></div>
@@ -40,7 +40,7 @@ const About = () => {
             <div>
               <SlideUp>
                 <h2 className="text-5xl leading-20 mb-5 font-glori">
-                  Hello my friend, im Luciano Estela, <span className="px-5 border shadow-gray-400 shadow-lg border-black/10">Framer Developer</span> and UX/IX Designer from Perú, Huánuco.
+                  Hello my friend, im Luciano Estela, <span className="px-5 border shadow-black shadow-lg border-black/10">Framer Developer</span> and UX/IX Designer from Perú, Huánuco.
                 </h2>
                 <div className="mt-6">
                   <a href="/cv/Curriculum Vitae.pdf" target="_blank" className="inline-flex items-center bg-[#AAB99A] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#727D73] transition">

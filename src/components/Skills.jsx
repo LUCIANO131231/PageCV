@@ -10,7 +10,7 @@ const Skills = () => {
   const [activeTab, setActiveTab] = useState("conocimientos");
 
   return (
-    <section id="skill" className="py-16 overflow-hidden">
+    <section id="skill" className="py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <Title>
