@@ -14,6 +14,7 @@ import certificado13 from '../../assets/certificates/0013.jpg'
 import certificado14 from '../../assets/certificates/0014.jpg'
 import certificado15 from '../../assets/certificates/0015.jpg'
 import certificado16 from '../../assets/certificates/0016.jpg'
+import certificado17 from '../../assets/certificates/0017.jpg'
 
 export const certificatesData = [
   {
@@ -143,7 +144,15 @@ export const certificatesData = [
     date: "Abril 2024",
     category: "Ciberseguridad",
     image: certificado16,
-  }
+  },
+  {
+    id: 17,
+    title: "Modernización de la gestión pública",
+    organization: "ENAP",
+    date: "Mayo 2025",
+    category: "Administración Pública",
+    image: certificado17,
+  },
 ];
 
 // categorias para el filtro
