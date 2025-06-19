@@ -73,14 +73,16 @@ const CertificateModal = ({ certificate, onClose }) => {
               </div>
             </div>
             
-            <div className="bg-gray-50 rounded-lg p-4 mt-4">
-              <h3 className="font-medium mb-2">Acerca de este certificado</h3>
-              <p className="text-gray-600 text-sm">
-              Certificación obtenida en tras completar satisfactoriamente el programa formativo. 
-              Este curso impartido por <span className='font-glori text-blue-700 font-bold'>{certificate.organization}</span> me permitió adquirir conocimientos especializados 
-              y competencias profesionales en <span className='font-glori text-blue-700 font-bold'>{certificate.title}</span>.
-              </p>
-            </div>
+            {certificate.id !== 21 && (
+              <div className="bg-gray-50 rounded-lg p-4 mt-4">
+                <h3 className="font-medium mb-2">Acerca de este certificado</h3>
+                <p className="text-gray-600 text-sm">
+                  Certificación obtenida en tras completar satisfactoriamente el programa formativo. 
+                  Este curso impartido por <span className='font-glori text-blue-700 font-bold'>{certificate.organization}</span> me permitió adquirir conocimientos especializados 
+                  y competencias profesionales en <span className='font-glori text-blue-700 font-bold'>{certificate.title}</span>.
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </motion.div>
