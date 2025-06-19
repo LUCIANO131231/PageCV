@@ -19,7 +19,7 @@ const Skills = () => {
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}>
-              skills <span className='letra text-white'>and</span> knowledge
+              habilidades <span className='letra text-white'>y</span> conocimientos
             </motion.h1>
           </Title>
         </div>

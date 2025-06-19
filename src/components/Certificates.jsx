@@ -75,7 +75,7 @@ const Certificates = () => {
           {/* <FloatingCertificate /> */}
           <Title>
             <h2 className="text-[90px] letra font-slowin text-green-500">
-              Mis Certificados
+              Certificados
             </h2>
             <p className="text-lg text-gray-600 font-glori mt-4 max-w-3xl mx-auto">
               Logros académicos y profesionales que reflejan mi compromiso con el aprendizaje continuo
