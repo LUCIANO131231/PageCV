@@ -20,8 +20,26 @@ import certificado19 from '../../assets/certificates/0019.jpg'
 import certificado20 from '../../assets/certificates/0020.jpg'
 import certificado21 from '../../assets/certificates/0021.jpg'
 import certificado22 from '../../assets/certificates/0022.jpg'
+import certificado23 from '../../assets/certificates/0023.jpg'
+import certificado24 from '../../assets/certificates/0024.jpg'
 
 export const certificatesData = [
+  {
+    id: 24,
+    title: "Desarrollo Front-End",
+    organization: "Ministerio de Trabajo y Promoción del Empleo",
+    date: "Agosto 2025",
+    category: "Desarrollo Web",
+    image: certificado24,
+  },
+  {
+    id: 23,
+    title: "Fundamentos de UX",
+    organization: "Fundación Telefónica",
+    date: "Agosto 2025",
+    category: "Desarrollo Web",
+    image: certificado23,
+  },
   {
     id: 17,
     title: "Modernización de la gestión pública",
