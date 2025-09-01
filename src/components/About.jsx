@@ -1,5 +1,5 @@
 import SlideUp from "./animations/Slideup"
-import Profile from "../assets/images/about/0000.jpg"
+import Profile from "../assets/images/about/111.jpg"
 import {RiFacebookCircleFill, RiLinkedinFill, RiGithubFill, RiInstagramFill, RiDownloadFill, RiArrowRightUpLine} from '@remixicon/react'
 
 const About = () => {
@@ -12,11 +12,12 @@ const About = () => {
             <SlideUp>
               <div>
                 <img src={Profile} alt="Perfil" className="rounded-xl mx-auto object-contain w-[420px] h-[420px]" />
-                <h2 className="mt-8 text-3xl">Luciano Estela</h2>
+                <h2 className="mt-8 text-3xl">Renzo Paolo</h2>
+                <h2 className="mt-2 text-3xl animate-spin">.</h2>
                 <div className="relative inline-flex items-center border border-gray-800 px-5 py-3 mt-4 rounded-full">
-                  <h6 className="text-gray-600 mr-4">Disponible para trabajar</h6>
-                  <div className="absolute right-3 h-3 w-3 bg-green-400 rounded-full animate-ping"></div>
-                  <div className="absolute right-3 h-3 w-3 bg-green-400 rounded-full"></div>
+                  <h6 className="text-gray-900 mr-4">Disponible para trabajar</h6>
+                  <div className="absolute right-3 h-3 w-3 bg-green-900 rounded-full animate-ping"></div>
+                  <div className="absolute right-3 h-3 w-3 bg-green-700 rounded-full"></div>
                 </div>
                 <div className="mt-6 flex justify-center gap-4">
                   <a href="https://www.facebook.com/renzo.luciano.773/" target="_blank" className="p-3 bg-gray-100 rounded-md hover:bg-gray-200 transition">
@@ -40,21 +41,21 @@ const About = () => {
             <div>
               <SlideUp>
                 <h2 className="text-5xl leading-20 mb-5 font-glori">
-                  Hello my friend, im Luciano Estela, <span className="px-5 border shadow-black shadow-lg border-black/10">Framer Developer</span> and UX/IX Designer from Perú, Huánuco.
+                  Hello my friend, i'm Luciano Estela, <span className="px-5 border shadow-[#3F4E4F] shadow-2xl font-roblox border-black/10">FRONTEND DEVELOPER</span> and UX/IX Designer from Perú, Huánuco.
                 </h2>
-                <div className="mt-6">
-                  <a href="/cv/cv.pdf" target="_blank" className="inline-flex items-center bg-[#AAB99A] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#727D73] transition">
-                    Downloand CV <RiDownloadFill size={16} className="ml-2" />
+                <div className="mt-6 justify-center text-right">
+                  <a href="/cv/cv.pdf" target="_blank" className="inline-flex items-center bg-[#3F4E4F] hover:bg-[#56696b] text-white px-6 py-3 rounded-4xl animate-bounce shadow-md">
+                    Descargar CV <RiDownloadFill size={16} className="ml-2" />
                   </a>
                 </div>
               </SlideUp>
               <SlideUp>
-                <ul className="mt-8 grid grid-cols-2 gap-x-10 gap-y-4 font-glori text-md text-zinc-600">
-                  <li className="flex items-center"><RiArrowRightUpLine size={18} className="mr-2"/>Logo Design</li>
-                  <li className="flex items-center"><RiArrowRightUpLine size={18} className="mr-2"/>Social Marketing</li>
-                  <li className="flex items-center"><RiArrowRightUpLine size={18} className="mr-2"/>Branding Identify</li>
-                  <li className="flex items-center"><RiArrowRightUpLine size={18} className="mr-2"/>Digital Marketing</li>
-                  <li className="flex items-center"><RiArrowRightUpLine size={18} className="mr-2"/>Web Design</li>
+                <ul className="mt-8 grid grid-cols-2 gap-x-10 gap-y-4 font-glori text-md">
+                  <li className="flex items-center"><RiArrowRightUpLine size={18} className="mr-2"/>UX Design</li>
+                  <li className="flex items-center"><RiArrowRightUpLine size={18} className="mr-2"/>UI Design</li>
+                  <li className="flex items-center"><RiArrowRightUpLine size={18} className="mr-2"/>Frontend Development</li>
+                  <li className="flex items-center"><RiArrowRightUpLine size={18} className="mr-2"/>Backend Integration</li>
+                  <li className="flex items-center"><RiArrowRightUpLine size={18} className="mr-2"/>Responsive Web Design</li>
                   <li className="flex items-center"><RiArrowRightUpLine size={18} className="mr-2"/>Product Design</li>
                 </ul>
               </SlideUp>
