@@ -12,9 +12,23 @@
   url('/fonts/Quicksand-VariableFont_wght.ttf'),
 }
 
+@font-face {
+  font-family: Roblox;
+  src:
+  url('/fonts/Urban Heroes.ttf'),
+}
+
+@font-face {
+  font-family: Valentin;
+  src:
+  url('/fonts/Valentine.otf'),
+}
+
 @theme {
   --font-slowin: Slowing, "sans-serif";
   --font-glori: Gloria, "normal";
+  --font-roblox: Roblox, "normal";
+  --font-valentin: Valentin, "normal";
 }
 
 .letra {
