@@ -1,4 +1,6 @@
 import SlideUp from "./animations/Slideup"
+import CircularText from "./animations/CircularText"
+import FallingText from "./animations/FallingText"
 import Profile from "../assets/images/about/111.jpg"
 import {RiFacebookCircleFill, RiLinkedinFill, RiGithubFill, RiInstagramFill, RiDownloadFill, RiArrowRightUpLine} from '@remixicon/react'
 
@@ -12,8 +14,12 @@ const About = () => {
             <SlideUp>
               <div>
                 <img src={Profile} alt="Perfil" className="rounded-xl mx-auto object-contain w-[420px] h-[420px]" />
-                <h2 className="mt-8 text-3xl">Renzo Paolo</h2>
-                <h2 className="mt-2 text-3xl animate-spin">.</h2>
+                <CircularText
+                  text="RENZO*PAOLO*"
+                  onHover="speedUp"
+                  spinDuration={20}
+                  className=""
+                />
                 <div className="relative inline-flex items-center border border-gray-800 px-5 py-3 mt-4 rounded-full">
                   <h6 className="text-gray-900 mr-4">Disponible para trabajar</h6>
                   <div className="absolute right-3 h-3 w-3 bg-green-900 rounded-full animate-ping"></div>
@@ -41,7 +47,7 @@ const About = () => {
             <div>
               <SlideUp>
                 <h2 className="text-5xl leading-20 mb-5 font-glori">
-                  Hello my friend, i'm Luciano Estela, <span className="px-5 border shadow-[#3F4E4F] shadow-2xl font-roblox border-black/10">FRONTEND DEVELOPER</span> and UX/IX Designer from Perú, Huánuco.
+                  Hello my friend, welcome to my portfolio <span className="px-5 border shadow-[#3F4E4F] shadow-2xl font-roblox border-black/10">FRONTEND DEVELOPER</span> and UX/IX Designer from Perú, Huánuco.
                 </h2>
                 <div className="mt-6 justify-center text-right">
                   <a href="/cv/cv.pdf" target="_blank" className="inline-flex items-center bg-[#3F4E4F] hover:bg-[#56696b] text-white px-6 py-3 rounded-4xl animate-bounce shadow-md">
