@@ -22,8 +22,26 @@ import certificado21 from '../../assets/certificatess/21.jpg'
 import certificado22 from '../../assets/certificatess/22.jpg'
 import certificado23 from '../../assets/certificatess/23.jpg'
 import certificado24 from '../../assets/certificatess/24.jpg'
+import certificado25 from '../../assets/certificatess/25.jpg'
+// import certificado26 from '../../assets/certificatess/26.jpg'
 
 export const certificatesData = [
+  // {
+  //   id: 26,
+  //   title: "Desarrollo Front-End",
+  //   organization: "Ministerio de Trabajo y Promoción del Empleo",
+  //   date: "Agosto 2025",
+  //   category: "Desarrollo Web",
+  //   image: certificado24,
+  // },
+  {
+    id: 25,
+    title: "Power BI Intermedio-Avanzado",
+    organization: "Netzun",
+    date: "Agosto 2025",
+    category: "Ciencia de Datos",
+    image: certificado25,
+  },
   {
     id: 24,
     title: "Desarrollo Front-End",
