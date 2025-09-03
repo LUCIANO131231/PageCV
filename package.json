@@ -10,9 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@remixicon/react": "^4.6.0",
     "@tailwindcss/vite": "^4.0.9",
-    "framer-motion": "^12.6.3",
+    "framer-motion": "^12.23.12",
+    "gsap": "^3.13.0",
+    "matter-js": "^0.20.0",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
