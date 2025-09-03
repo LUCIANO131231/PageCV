@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import Matter from 'matter-js';
-import '/Proyectos/PageCV/src/assets/styles/FallingText.css';
+import '../../assets/styles/FallingText.css';
 
 const FallingText = ({
   className = '',

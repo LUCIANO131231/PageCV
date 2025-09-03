@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { motion, useAnimation, useMotionValue } from 'framer-motion';
 
-import '/Proyectos/PageCV/src/assets/styles/CircularText.css';
+import '../../assets/styles/CircularText.css';
 
 const getRotationTransition = (duration, from, loop = true) => ({
   from,
