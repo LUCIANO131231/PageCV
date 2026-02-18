@@ -3,7 +3,7 @@ export const workExperience = [
     id: 1,
     years: "2024 - 2025",
     institute: "Universidad de Huánuco",
-    position: "Desarrollo Frontend"
+    position: "Desarrollador"
   },
   {
     id: 2,
