@@ -1,6 +1,5 @@
 import SlideUp from "./animations/Slideup"
 import CircularText from "./animations/CircularText"
-import FallingText from "./animations/FallingText"
 import Profile from "../assets/images/about/111.jpg"
 import {RiFacebookCircleFill, RiLinkedinFill, RiGithubFill, RiInstagramFill, RiDownloadFill, RiArrowRightUpLine} from '@remixicon/react'
 
@@ -50,7 +49,7 @@ const About = () => {
                   Hello my friend, welcome to my portfolio <span className="px-5 border shadow-[#3F4E4F] shadow-2xl font-roblox border-black/10">FRONTEND DEVELOPER</span> and UX/IX Designer from Perú, Huánuco.
                 </h2>
                 <div className="mt-6 justify-center text-right">
-                  <a href="/cv/cv.pdf" target="_blank" className="inline-flex items-center bg-[#3F4E4F] hover:bg-[#56696b] text-white px-6 py-3 rounded-4xl animate-bounce shadow-md">
+                  <a href="/cv/CV_2026.pdf" target="_blank" className="inline-flex items-center bg-[#3F4E4F] hover:bg-[#56696b] text-white px-6 py-3 rounded-4xl animate-bounce shadow-md">
                     Descargar CV <RiDownloadFill size={16} className="ml-2" />
                   </a>
                 </div>
