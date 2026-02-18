@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
-import { RiCloseLine, RiMedal2Fill, RiCalendar2Fill } from '@remixicon/react';
+import { RiCloseLine, RiMedal2Fill, RiCalendar2Fill, RiPriceTag3Fill } from '@remixicon/react';
 import Confetti from '../animations/Confetti';
 import { useEffect, useState } from 'react';
 
@@ -8,9 +8,8 @@ const CertificateModal = ({ certificate, onClose }) => {
   const [showConfetti, setShowConfetti] = useState(false);
 
   useEffect(() => {
-    if(certificate) {
+    if (certificate) {
       setShowConfetti(true);
-      //desactivar despues de 5 segundos
       const timer = setTimeout(() => setShowConfetti(false), 5000);
       return () => clearTimeout(timer);
     }
@@ -25,8 +24,9 @@ const CertificateModal = ({ certificate, onClose }) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       onClick={onClose}>
-        
-      <Confetti isActive={showConfetti} />  
+
+      <Confetti isActive={showConfetti} />
+
       <motion.div
         className="bg-white rounded-xl overflow-hidden max-w-4xl w-full max-h-[90vh] flex flex-col md:flex-row"
         layoutId={`certificate-${certificate.id}`}
@@ -35,54 +35,56 @@ const CertificateModal = ({ certificate, onClose }) => {
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.9, opacity: 0 }}
         transition={{ type: 'spring', damping: 25, stiffness: 300 }}>
-        
-        {/* imagen del certificado responsivo */}
-        <div className="md:w-3/5 bg-gray-100 md:min-h-full flex items-center justify-center p-4">
-          <img 
-            src={certificate.image} 
-            alt={certificate.title} 
-            className="w-full h-auto max-h-[70vh] object-contain rounded-lg shadow-lg" 
+
+        {/* imagen */}
+        <div className="md:w-3/5 bg-gray-100 flex items-center justify-center p-4">
+          <img
+            src={certificate.image}
+            alt={certificate.title}
+            className="w-full h-auto max-h-[70vh] object-contain rounded-lg shadow-lg"
           />
         </div>
-        
-        {/* detalles del certificado responsivo */}
-        <div className="md:w-2/5 p-6 flex flex-col">
+
+        {/* detalles */}
+        <div className="md:w-2/5 p-6 flex flex-col justify-between">
+          
+          {/* header */}
           <div className="flex justify-between items-start mb-6">
-            <h2 className="text-2xl font-glori font-bold">{certificate.title}</h2>
-            <button 
+            <h2 className="text-xl font-glori font-bold leading-snug pr-2">
+              {certificate.title}
+            </h2>
+            <button
               onClick={onClose}
-              className="p-2 rounded-full hover:bg-gray-100 transition-colors cursor-pointer">
+              className="p-2 rounded-full hover:bg-gray-100 transition-colors cursor-pointer shrink-0">
               <RiCloseLine size={24} />
             </button>
           </div>
-          
+
+          {/* info */}
           <div className="space-y-4 flex-grow">
-            <div className="flex items-center">
-              <RiMedal2Fill className="text-yellow-500 mr-3" size={24} />
+            <div className="flex items-center gap-3">
+              <RiMedal2Fill className="text-yellow-500 shrink-0" size={22} />
               <div>
-                <span className="text-sm text-gray-500">Organización</span>
-                <p className="font-medium">{certificate.organization}</p>
+                <span className="text-xs text-gray-400">Organización</span>
+                <p className="font-medium text-sm">{certificate.organization}</p>
               </div>
             </div>
-            
-            <div className="flex items-center">
-              <RiCalendar2Fill className="text-green-500 mr-3" size={24} />
+
+            <div className="flex items-center gap-3">
+              <RiCalendar2Fill className="text-green-500 shrink-0" size={22} />
               <div>
-                <span className="text-sm text-gray-500">Fecha de emisión</span>
-                <p className="font-medium">{certificate.date}</p>
+                <span className="text-xs text-gray-400">Fecha de emisión</span>
+                <p className="font-medium text-sm">{certificate.date}</p>
               </div>
             </div>
-            
-            {certificate.id !== 21 && (
-              <div className="bg-gray-50 rounded-lg p-4 mt-4">
-                <h3 className="font-medium mb-2">Acerca de este certificado</h3>
-                <p className="text-gray-600 text-sm">
-                  Certificación obtenida en tras completar satisfactoriamente el programa formativo. 
-                  Este curso impartido por <span className='font-glori text-blue-700 font-bold'>{certificate.organization}</span> me permitió adquirir conocimientos especializados 
-                  y competencias profesionales en <span className='font-glori text-blue-700 font-bold'>{certificate.title}</span>.
-                </p>
+
+            <div className="flex items-center gap-3">
+              <RiPriceTag3Fill className="text-blue-400 shrink-0" size={22} />
+              <div>
+                <span className="text-xs text-gray-400">Categoría</span>
+                <p className="font-medium text-sm">{certificate.category}</p>
               </div>
-            )}
+            </div>
           </div>
         </div>
       </motion.div>

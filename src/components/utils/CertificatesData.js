@@ -400,7 +400,7 @@ export const certificatesData = [
     organization: "PAISI",
     date: "Noviembre 2024",
     category: "Universidad",
-    image: getCertificateImage(173),
+    image: getCertificateImage(7),
   },
   {
     id: 6,

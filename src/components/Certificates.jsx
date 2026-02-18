@@ -36,6 +36,19 @@ const Certificates = () => {
       );
     }
 
+    const monthOrder = {
+      'Enero': 1, 'Febrero': 2, 'Marzo': 3, 'Abril': 4,
+      'Mayo': 5, 'Junio': 6, 'Julio': 7, 'Agosto': 8,
+      'Setiembre': 9, 'Octubre': 10, 'Noviembre': 11, 'Diciembre': 12
+    };
+
+    filtered = [...filtered].sort((a, b) => {
+      const [mesA, anioA] = a.date.split(' ');
+      const [mesB, anioB] = b.date.split(' ');
+      if (anioB !== anioA) return Number(anioB) - Number(anioA);
+      return monthOrder[mesB] - monthOrder[mesA];
+    });
+
     setFilteredCertificates(filtered);
     setCurrentPage(1);
   }, [selectedCategory, searchTerm]);
